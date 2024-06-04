@@ -1,0 +1,440 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/adept/pioneer3/protos/Pioneer3at.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/devices/sick/protos/SickLms291.proto"
+
+WorldInfo {
+  info [
+    "Pioneer 3AT robot (Adept MobileRobots)."
+    "This all terrain four wheels drive robot is  equipped with a Sick LMS 291 lidar."
+    "It is programmed to perform a simple obstacle avoidance behavior based on the sensor data measured by the lidar."
+  ]
+  title "Pioneer 3AT"
+  lineScale 0.5
+}
+Viewpoint {
+  orientation -0.05427413829386378 -0.15886569531124428 -0.9858072878436909 0.6672030003489132
+  position 5.492704570285321 1.458020289326696 0.4256864153063875
+  follow "Pioneer 3-AT"
+  followSmoothness 0
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 60 60
+  floorTileSize 3 3
+  floorAppearance SandyGround {
+  }
+  wallThickness 0.2
+  wallHeight 0.8
+  wallAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/default/worlds/textures/gray_brick_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+    textureTransform TextureTransform {
+      scale 56 28
+    }
+  }
+}
+DEF OBSTACLE_1 Solid {
+  translation 15.7489 -12.6243 1
+  children [
+    DEF OBSTACLE_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.898039 0.898039 0.898039
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/default/worlds/textures/rock.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+        textureTransform TextureTransform {
+          scale 1.5 1.5
+        }
+      }
+      geometry Cylinder {
+        radius 0.4
+        subdivision 20
+      }
+    }
+  ]
+  name "obstacle"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_2 Solid {
+  translation -6.11857 18.7895 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(2)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_3 Solid {
+  translation 21.7282 24.6243 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(3)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_4 Solid {
+  translation 27.5208 6.81157 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(4)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_5 Solid {
+  translation -13.0666 5.54135 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(5)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_6 Solid {
+  translation -26.5756 20.8546 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(6)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_7 Solid {
+  translation 5.65869 4.7766 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(7)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_8 Solid {
+  translation 2.48883 -16.7941 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(8)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_9 Solid {
+  translation -21.5071 -19.6972 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(9)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_10 Solid {
+  translation -11.3252 -23.9583 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(10)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_11 Solid {
+  translation -27.9213 27.5921 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(11)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_12 Solid {
+  translation -20.3505 12.0943 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(12)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_13 Solid {
+  translation -20.1731 -14.1931 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(13)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_14 Solid {
+  translation -12.5078 26.5308 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(14)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_15 Solid {
+  translation 23.5136 -16.3913 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(15)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_16 Solid {
+  translation 11.2747 3.27308 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(16)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_17 Solid {
+  translation 22.197 3.21502 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(17)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_18 Solid {
+  translation 28.4213 -6.60283 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(18)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_19 Solid {
+  translation 19.4685 20.9128 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(19)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_20 Solid {
+  translation 4.81033 27.563 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(20)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_21 Solid {
+  translation -2.91762 -27.7484 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(21)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_22 Solid {
+  translation 5.15002 -24.9015 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(22)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_23 Solid {
+  translation -14.717 -6.97726 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(23)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_24 Solid {
+  translation 28.6207 21.1249 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(24)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_25 Solid {
+  translation 15.5754 12.0666 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(25)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_26 Solid {
+  translation 9.79035 -14.8888 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(26)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_27 Solid {
+  translation -3.93434 -16.4364 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(27)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_28 Solid {
+  translation -27.7733 -5.49227 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(28)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_29 Solid {
+  translation -2.7517 25.0956 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(29)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_30 Solid {
+  translation -23.7889 0.62109 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(30)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_31 Solid {
+  translation -1.71767 -7.68168 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(31)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_32 Solid {
+  translation -25.1618 -10.2537 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(32)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_33 Solid {
+  translation 23.4432 11.5598 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(33)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_34 Solid {
+  translation -7.22118 5.04018 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(34)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_35 Solid {
+  translation 19.1942 -23.0269 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(35)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_36 Solid {
+  translation 16.558 -2.8216 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(36)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_37 Solid {
+  translation 5.42691 15.3295 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(37)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_38 Solid {
+  translation -16.683 24.0153 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(38)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_39 Solid {
+  translation 7.03998 -6.59248 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(39)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBSTACLE_40 Solid {
+  translation -28.0377 9.77742 1
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(40)"
+  boundingObject USE OBSTACLE_SHAPE
+}
+DEF OBJ_DESTINATION Solid {
+  translation 29 -29 -0.12
+  children [
+    USE OBSTACLE_SHAPE
+  ]
+  name "obstacle(1)"
+  contactMaterial "Material"
+  boundingObject USE OBSTACLE_SHAPE
+  recognitionColors [
+    1 0 0
+  ]
+}
+DEF PIONEER_3AT Pioneer3at {
+  hidden position_0_0 24.00001072812842
+  hidden position_0_1 24.0000100082106
+  hidden position_0_2 23.999985520722255
+  hidden position_0_3 23.999985429387863
+  hidden linearVelocity_0 0.5328807375929667 -0.13615476243782726 -3.119359551961684e-11
+  hidden angularVelocity_0 -1.5350242990462133e-06 3.915341748972834e-07 3.089976438307073e-06
+  hidden rotation_3 0.6985097810053514 -0.6985030926458262 -0.15549120683843268 2.8330885418885
+  hidden linearVelocity_3 0.5328804838499634 -0.13615495909822914 -3.060776058545644e-07
+  hidden angularVelocity_3 1.2377716078367054 4.84437003299749 -3.0368097620247e-07
+  hidden rotation_4 0.6985098096678624 -0.6985031213071641 -0.15549094932476373 2.8330890447533323
+  hidden linearVelocity_4 0.5328808777366968 -0.1361550591514227 3.058700235632114e-07
+  hidden angularVelocity_4 1.23777162940324 4.844370117585895 -3.037728958375307e-07
+  hidden rotation_5 0.6985107845730121 -0.6985040961724154 -0.15548219018766257 2.8331061493523113
+  hidden linearVelocity_5 0.5328805396032574 -0.13615469242758216 -3.059066558193254e-07
+  hidden angularVelocity_5 1.237771569241203 4.84437004019903 -2.9134708847277276e-07
+  hidden rotation_6 0.6985107882091437 -0.6985040998083982 -0.1554821575175109 2.833106213149759
+  hidden linearVelocity_6 0.532880933491762 -0.13615479304720196 3.0604097377162064e-07
+  hidden angularVelocity_6 1.2377715908571139 4.844370124806288 -2.9135009599789285e-07
+  translation 8.434359132210705 -2.1560464079333848 -0.002388931068638911
+  rotation 2.1702380045972787e-05 0.00019592522239845992 -0.9999999805711568 0.2501554494148271
+  controller "pioneer3at_obstacle_avoidance_with_lidar"
+  extensionSlot [
+    GPS {
+      translation 0 0 0.3
+      accuracy 0.25
+    }
+    SickLms291 {
+      translation 0.136 0 0.35
+    }
+  ]
+}
+DEF Box01 Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 1 0 0
+    }
+  }
+  geometry Box {
+    size 0.5 0.5 0.5
+  }
+}
